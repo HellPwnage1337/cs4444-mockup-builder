@@ -1,5 +1,9 @@
-/* Custom Stylesheet */
+/* Global stylesheet */
 
-* {
-  color: #FF0000;
+body {
+  background-color: #FFF;
+}
+
+li {
+  color: #000;
 }
