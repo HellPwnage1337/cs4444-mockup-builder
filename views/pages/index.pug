@@ -1,9 +1,9 @@
 extends /templates/main
 
 block content
-    h1 Mock-Ups
+    h1.border-bottom.pb-3.mb-4 Mock-Ups
 
-    ul
+    ul.list-unstyled
         li: a(href='/mockups/readme.html') Readme
         
         li
@@ -11,7 +11,7 @@ block content
 
             ul
                 li
-                    a(href='/mockups/table/index.html') Main View
+                    | Main View
 
                     ul
                         li: a(href='/mockups/table/index.html') Awaiting Order
@@ -19,6 +19,15 @@ block content
                         li: a(href='/mockups/table/order_cooking.html') Order Cooking
                         li: a(href='/mockups/table/order_incoming.html') Order Incoming
                         li: a(href='/mockups/table/awaiting_payment.html') Awaiting Payment
+                
+                li
+                    | Ordering
+                    
+                    ul
+                        li: a(href='/mockups/table/ordering/select_beverage.html') Select Beverage
+                        li: a(href='/mockups/table/ordering/select_appetizer.html') Select Appetizer
+                        li: a(href='/mockups/table/ordering/select_entree.html') Select Entree
+                        li: a(href='/mockups/table/ordering/select_dessert.html') Select Dessert
 
             ul
                 li: a(href='/mockups/table/menu.html') Menu
