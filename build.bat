@@ -2,8 +2,8 @@
 cls
 
 :PreClean
-echo pre-cleaning temp_output directory
-node clean.js temp_output/
+echo pre-cleaning output directories
+node clean.js output/ temp_output/
 
 :CopyStatic
 echo.
