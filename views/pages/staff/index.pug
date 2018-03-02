@@ -4,6 +4,7 @@ block scripts
     script(src="/mockups/static/scripts/mockup-staff.js")
 
 block content
+
     table.table#staff-table
         thead.thead-dark
             tr
@@ -12,8 +13,24 @@ block content
                 th(scope='col') Request
         tbody
             - for (var i = 1; i <= 16; ++i) {
-                tr
+                tr.show-table-modal&attributes({ 'data-table-number' : i + '' })
                     th(scope='row')= i
                     td(id='status-' + i) -
                     td(id='help-' + i) -
             - }
+
+    .modal#table-modal(tabindex='-1' role='dialog')
+        .modal-dialog(role='document')
+            .modal-content
+                .modal-header
+                    h5.modal-title Table 
+                        span#table-modal-number x
+                .modal-body
+                    p Status: 
+                        span#table-modal-status -
+                    p Requests: 
+                        span#table-modal-help -
+                .modal-footer
+                    button.btn.btn-success#modal-btn-close(data-dismiss='modal') Close
+    
+    btn.hidden#modal-show(type='button' data-toggle='modal' data-target='#table-modal')
