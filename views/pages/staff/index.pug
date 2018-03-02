@@ -1,5 +1,8 @@
 extends /templates/staff
 
+block scripts
+    script(src="/mockups/static/scripts/mockup-staff.js")
+
 block content
     table.table#staff-table
         thead.thead-dark
@@ -11,6 +14,6 @@ block content
             - for (var i = 1; i <= 16; ++i) {
                 tr
                     th(scope='row')= i
-                    td(id='status-' + i)
-                    td(id='request-' + i)
+                    td(id='status-' + i) -
+                    td(id='help-' + i) -
             - }
