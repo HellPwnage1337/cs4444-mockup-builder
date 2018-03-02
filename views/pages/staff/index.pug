@@ -1,0 +1,16 @@
+extends /templates/staff
+
+block content
+    table.table#staff-table
+        thead.thead-dark
+            tr
+                th(scope='col') Table
+                th(scope='col') Status
+                th(scope='col') Request
+        tbody
+            - for (var i = 1; i <= 16; ++i) {
+                tr
+                    th(scope='row')= i
+                    td(id='status-' + i)
+                    td(id='request-' + i)
+            - }
