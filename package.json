@@ -1,0 +1,33 @@
+{
+  "name": "mockups",
+  "version": "1.0.0",
+  "description": "Mockup builder",
+  "main": "build.js",
+  "scripts": {
+    "start": "run-script-os",
+    "start:win32": "nodemon -x \"build.bat\"",
+    "start:linux": "nodemon -x \"bash build.sh\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "minimist": "^1.2.0",
+    "mkdirp": "^0.5.1",
+    "morgan": "^1.9.0",
+    "pretty": "^2.0.0",
+    "pug": "^2.0.0-rc.4",
+    "replace-ext": "^1.0.0",
+    "walk": "^2.3.9"
+  },
+  "nodemonConfig": {
+    "ext": "pug js bat css",
+    "ignore": [
+      "output/*",
+      "temp_output/*"
+    ]
+  },
+  "devDependencies": {
+    "run-script-os": "^1.0.3"
+  }
+}
