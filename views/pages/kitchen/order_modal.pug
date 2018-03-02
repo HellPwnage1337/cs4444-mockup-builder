@@ -1,0 +1,50 @@
+extends /templates/kitchen
+
+block scripts
+    script.
+        $(() => {
+            $('#modal-show').click();
+        });
+
+block content
+    .row#orders
+        .col-4
+            .card
+                .card-body
+                    h5.card-title #1438
+                    ul.card-text
+                        li Diet Coke
+                        li Hot Dog **
+        .col-4
+            .card
+                .card-body
+                    h5.card-title #1439
+                    ul.card-text
+                        li Coke
+                        li Fried Pickles
+                        li Hamburger
+    .modal#order-modal(tabindex='-1')
+        .modal-dialog.modal-dialog-centered
+            .modal-content
+                .modal-header
+                    h5.modal-title Order #1438
+                .modal-body
+                    table.table
+                        thead.thead-dark
+                            tr
+                                th(scope='col') Item
+                                th(scope='col') Requests
+                                th(scope='col') Allergies
+                        tbody
+                            tr
+                                th(scope='row') Diet Coke
+                                th Wedge of lemon
+                                th -
+                            tr
+                                th(scope='row') Hot Dog
+                                th -
+                                th Gluten intolerant
+                .modal-footer
+                    button.btn.btn-primary Start Order
+                    button.btn.btn-danger Close
+    button.hidden#modal-show(data-toggle='modal' data-target='#order-modal')
