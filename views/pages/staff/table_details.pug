@@ -1,0 +1,38 @@
+extends /templates/staff
+
+block scripts
+    script(src="/mockups/static/mockup-staff.js")
+    script.
+        $(() => { $('#modal-show').click(); });
+
+block content
+
+    table.table#staff-table
+        thead.thead-dark
+            tr
+                th(scope='col') Table
+                th(scope='col') Status
+                th(scope='col') Request
+        tbody
+            - for (var i = 1; i <= 16; ++i) {
+                tr.show-table-modal&attributes({ 'data-table-number' : i + '' })
+                    th(scope='row')= i
+                    td(id='status-' + i) -
+                    td(id='help-' + i) -
+            - }
+
+    .modal#table-modal(tabindex='-1' role='dialog')
+        .modal-dialog.modal-dialog-centered(role='document')
+            .modal-content
+                .modal-header
+                    h5.modal-title Table 
+                        span#table-modal-number 3
+                .modal-body
+                    p Status: 
+                        span#table-modal-status Order received
+                    p Requests: 
+                        span#table-modal-help Needs refill
+                .modal-footer
+                    button.btn.btn-success#modal-btn-close(data-dismiss='modal') Close
+    
+    button.invisible#modal-show(type='button' data-toggle='modal' data-target='#table-modal')

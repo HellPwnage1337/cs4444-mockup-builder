@@ -9,19 +9,4 @@ $(window).ready(() => {
         $('#status-' + i).text(statuses[i]["status"]);
         $('#help-' + i).text(statuses[i]["help"]);
     }
-
-    $('.show-table-modal').click(() => {
-        let tableNumber = $(this).data('tableNumber');
-        console.log('clicked on table %s', tableNumber);
-
-        let tableStatus = statuses.hasOwnProperty(tableNumber) ? statuses[tableNumber] : {
-            "status": Status['Inactive'], "help": Request['None']
-        };
-
-        $('#table-modal-number').text(tableNumber);
-        $('#table-modal-status').text(tableStatus['status']);
-        $('#table-modal-help').text(tableStatus['help']);
-
-        $('#modal-show').click();
-    });
 });

@@ -18,19 +18,3 @@ block content
                     td(id='status-' + i) -
                     td(id='help-' + i) -
             - }
-
-    .modal#table-modal(tabindex='-1' role='dialog')
-        .modal-dialog.modal-dialog-centered(role='document')
-            .modal-content
-                .modal-header
-                    h5.modal-title Table 
-                        span#table-modal-number x
-                .modal-body
-                    p Status: 
-                        span#table-modal-status -
-                    p Requests: 
-                        span#table-modal-help -
-                .modal-footer
-                    button.btn.btn-success#modal-btn-close(data-dismiss='modal') Close
-    
-    button.hidden#modal-show(type='button' data-toggle='modal' data-target='#table-modal')
