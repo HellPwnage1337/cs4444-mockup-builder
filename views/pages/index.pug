@@ -9,89 +9,105 @@ block styles
 block content
     h1.border-bottom.pb-3.mb-4 Mock-Ups
 
-    h4 In-Store
+    .row
+        .col-6
+            h4 In-Store
 
-    ul.list-unstyled
-        
-        li
-            | Table
+            .container.mb-5.pb-3
 
-            ul
-                li: a(href='/mockups/table/menu.html') Menu
-                
-                li
-                    | Main View
-
-                    ul
-                        li: a(href='/mockups/table/index.html') Awaiting Order
-                        li: a(href='/mockups/table/order_received.html') Order Placed
-                        li: a(href='/mockups/table/order_cooking.html') Order Cooking
-                        li: a(href='/mockups/table/order_incoming.html') Order Incoming
-                        li: a(href='/mockups/table/awaiting_payment.html') Awaiting Payment
-                
-                li
-                    | Ordering
+                ul.list-unstyled
                     
-                    ul
-                        li: a(href='/mockups/table/ordering/select_beverage.html') Select Beverage
-                        li: a(href='/mockups/table/ordering/select_appetizer.html') Select Appetizer
-                        li: a(href='/mockups/table/ordering/select_entree.html') Select Entree
-                        li: a(href='/mockups/table/ordering/select_dessert.html') Select Dessert
-                
-                li
-                    | Payment
+                    li
+                        | Table
 
-                    ul
-                        li: a(href='/mockups/table/payment/payment.html') Pay In Full
-                        li: a(href='/mockups/table/payment/split.html') Split Payment
-                        li: a(href='/mockups/table/payment/add_tip.html') Add Tip
-                        li: a(href='/mockups/table/payment/pay_card.html') Card Payment
-                        li: a(href='/mockups/table/payment/pay_cash.html') Cash Payment
-        
-        li
-            | Staff
+                        ul
+                            li: a(href='/mockups/table/menu.html') Menu
+                            
+                            li
+                                | Main View
 
-            ul
-                li
-                    | Main View
+                                ul
+                                    li: a(href='/mockups/table/index.html') Awaiting Order
+                                    li: a(href='/mockups/table/order_received.html') Order Placed
+                                    li: a(href='/mockups/table/order_cooking.html') Order Cooking
+                                    li: a(href='/mockups/table/order_incoming.html') Order Incoming
+                                    li: a(href='/mockups/table/awaiting_payment.html') Awaiting Payment
+                            
+                            li
+                                | Ordering
+                                
+                                ul
+                                    li: a(href='/mockups/table/ordering/select_beverage.html') Select Beverage
+                                    li: a(href='/mockups/table/ordering/select_appetizer.html') Select Appetizer
+                                    li: a(href='/mockups/table/ordering/select_entree.html') Select Entree
+                                    li: a(href='/mockups/table/ordering/select_dessert.html') Select Dessert
+                            
+                            li
+                                | Payment
 
-                    ul
-                        li: a(href='/mockups/staff/index.html') Overview
-                        li: a(href='/mockups/staff/table_details.html') Table Details
-                
-                li
-                    | Adjustments
+                                ul
+                                    li: a(href='/mockups/table/payment/payment.html') Pay In Full
+                                    li: a(href='/mockups/table/payment/split.html') Split Payment
+                                    li: a(href='/mockups/table/payment/add_tip.html') Add Tip
+                                    li: a(href='/mockups/table/payment/pay_card.html') Card Payment
+                                    li: a(href='/mockups/table/payment/pay_cash.html') Cash Payment
+                    
+                    li
+                        | Staff
 
-                    ul
-                        li: a(href='/mockups/staff/adjustments/adjust.html') Adjustments
-                        li: a(href='/mockups/staff/adjustments/cancel_order.html') Cancel Order
-                        li: a(href='/mockups/staff/adjustments/cash_out.html') Cash Out
-                        li: a(href='/mockups/staff/adjustments/comp.html') Comp Item(s)
+                        ul
+                            li
+                                | Main View
 
-        
-        li
-            | Kitchen
+                                ul
+                                    li: a(href='/mockups/staff/index.html') Overview
+                                    li: a(href='/mockups/staff/table_details.html') Table Details
+                            
+                            li
+                                | Adjustments
 
-            ul
-                li
-                    | Main View
+                                ul
+                                    li: a(href='/mockups/staff/adjustments/adjust.html') Adjustments
+                                    li: a(href='/mockups/staff/adjustments/cancel_order.html') Cancel Order
+                                    li: a(href='/mockups/staff/adjustments/cash_out.html') Cash Out
+                                    li: a(href='/mockups/staff/adjustments/comp.html') Comp Item(s)
 
-                    ul
-                        li: a(href='/mockups/kitchen/index.html') Overview
-                        li: a(href='/mockups/kitchen/order_details.html') Order Details
-                        li: a(href='/mockups/kitchen/order_started.html') Order Started
-        
-        li
-            | Manager
+                    
+                    li
+                        | Kitchen
 
-            ul
-                li
-                    | Main View
+                        ul
+                            li
+                                | Main View
 
-                    ul
-                        li: a(href='/mockups/manager/index.html') Overview
-    
-    h4 Take-Out
+                                ul
+                                    li: a(href='/mockups/kitchen/index.html') Overview
+                                    li: a(href='/mockups/kitchen/order_details.html') Order Details
+                                    li: a(href='/mockups/kitchen/order_started.html') Order Started
+                    
+                    li
+                        | Manager
 
-    ul
-        li: a(href='/mockups/takeout/index.html') Home
+                        ul
+                            li
+                                | Main View
+
+                                ul
+                                    li: a(href='/mockups/manager/index.html') Overview
+            
+        .col-6
+            h4 Take-Out
+
+            .container.mb-5.pb-3
+
+                ul
+                    li: a(href='/mockups/takeout/index.html') Home
+
+                    li
+                                | Ordering
+                                
+                                ul
+                                    li: a(href='/mockups/takeout/ordering/select_beverage.html') Select Beverage
+                                    li: a(href='/mockups/takeout/ordering/select_appetizer.html') Select Appetizer
+                                    li: a(href='/mockups/takeout/ordering/select_entree.html') Select Entree
+                                    li: a(href='/mockups/takeout/ordering/select_dessert.html') Select Dessert
