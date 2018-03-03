@@ -100,14 +100,23 @@ block content
 
             .container.mb-5.pb-3
 
-                ul
-                    li: a(href='/mockups/takeout/index.html') Home
+                ul.list-unstyled
+                    li: a(href='/mockups/takeout/menu.html') Menu
 
                     li
-                                | Ordering
-                                
-                                ul
-                                    li: a(href='/mockups/takeout/ordering/select_beverage.html') Select Beverage
-                                    li: a(href='/mockups/takeout/ordering/select_appetizer.html') Select Appetizer
-                                    li: a(href='/mockups/takeout/ordering/select_entree.html') Select Entree
-                                    li: a(href='/mockups/takeout/ordering/select_dessert.html') Select Dessert
+                        | Ordering
+                        
+                        ul
+                            li: a(href='/mockups/takeout/ordering/select_beverage.html') Select Beverage
+                            li: a(href='/mockups/takeout/ordering/select_appetizer.html') Select Appetizer
+                            li: a(href='/mockups/takeout/ordering/select_entree.html') Select Entree
+                            li: a(href='/mockups/takeout/ordering/select_dessert.html') Select Dessert
+                    
+                    li
+                        | Payment
+
+                        ul
+                            li: a(href='/mockups/takeout/payment/payment.html') Confirm Order
+                            li: a(href='/mockups/takeout/payment/add_tip.html') Add Tip
+                            li: a(href='/mockups/takeout/payment/pay_card.html') Pay Card
+                            li (Note: choosing "cash" will place the order without taking payment, expecting payment to be taken by the wait staff)
