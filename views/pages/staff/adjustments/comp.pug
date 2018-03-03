@@ -1,0 +1,81 @@
+extends /templates/staff
+
+block scripts
+    script.
+        $(() => { $('#show-comp').click(); });
+
+block content
+    h1.mb-5 Adjust Table: 3
+
+    h3.border-bottom.pb-3.mb-2 Actions
+
+    .container.mt-3#buttons
+        button.btn.btn-danger.btn-lg.mx-2 Cancel Order
+        button.btn.btn-primary.btn-lg.mx-2 Cash Out
+        button.btn.btn-info.btn-lg.mx-2 Comp Item(s)
+    
+    .container.border-top.my-5.py-5
+        button.btn.btn-primary.btn-lg &lt; Back
+    
+    .modal#cancel-modal(tabindex='-1')
+        .modal-dialog.modal-dialog-centered
+            .modal-content
+                .modal-header
+                    h5.modal-title Cancel Order
+                .modal-body
+                    p Cancel table 3's order?
+                .modal-footer.justify-content-between
+                    button.btn.btn-primary No
+                    button.btn.btn-danger Yes
+    
+    .modal#cash-out-modal(tabindex='-1')
+        .modal-dialog.modal-dialog-centered
+            .modal-content
+                .modal-header
+                    h5.modal-title Cash Out
+                .modal-body
+                    p Cash out table 3?
+                .modal-footer.justify-content-between
+                    button.btn.btn-primary No
+                    button.btn.btn-success Yes
+    
+    .modal#comp-modal(tabindex='-1')
+        .modal-dialog.modal-dialog-centered
+            .modal-content
+                .modal-header
+                    h5.modal-title Comp Item(s)
+                .modal-body
+                    table.table.table-sm
+                        thead.thead-light
+                            tr
+                                th(scope='col')
+                                th(scope='col') Item
+                                th(scope='col') Price
+                        tbody
+                            tr(data-price='3.99')
+                                td: input(type='checkbox' checked='checked')
+                                td Diet Coke
+                                td 3.99
+                            tr(data-price='5.99')
+                                td: input(type='checkbox' checked='checked')
+                                td Hot Dog
+                                td 5.99
+                            tr(data-price='3.99')
+                                td: input(type='checkbox')
+                                td Coke
+                                td 3.99
+                            tr(data-price='4.99')
+                                td: input(type='checkbox' checked='checked')
+                                td Fried Pickles
+                                td 4.99
+                            tr(data-price='5.99')
+                                td: input(type='checkbox')
+                                td Hamburger
+                                td 5.99
+                .modal-footer.justify-content-between
+                    button.btn.btn-primary Cancel
+                    button.btn.btn-info Comp
+    
+    button.invisible#show-cancel(data-toggle='modal' data-target='#cancel-modal')
+    button.invisible#show-cash-out(data-toggle='modal' data-target='#cash-out-modal')
+    button.invisible#show-comp(data-toggle='modal' data-target='#comp-modal')
