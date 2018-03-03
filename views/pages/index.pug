@@ -1,13 +1,18 @@
 extends /templates/main
 
+block styles
+    style.
+        a {
+            text-decoration: underline;
+        }
+
 block content
     h1.border-bottom.pb-3.mb-4 Mock-Ups
 
     ul.list-unstyled
-        li: a(href='/mockups/readme.html') Readme
         
         li
-            a(href='/mockups/table/') Table
+            | Table
 
             ul
                 li
@@ -29,16 +34,19 @@ block content
                         li: a(href='/mockups/table/ordering/select_entree.html') Select Entree
                         li: a(href='/mockups/table/ordering/select_dessert.html') Select Dessert
 
-            ul
                 li: a(href='/mockups/table/menu.html') Menu
-                li: a(href='/mockups/table/payment/payment.html') Payment
+                
+                li Payment
+                    ul
+                        li: a(href='/mockups/table/payment/payment.html') Pay In Full
+                        li: a(href='/mockups/table/payment/split.html') Split Payment
         
         li
-            a(href='/mockups/staff/') Staff
+            | Staff
 
             ul
                 li
-                    a(href='/mockups/staff/index.html') Main View
+                    | Main View
 
                 ul
                     li: a(href='/mockups/staff/index.html') Overview
@@ -46,11 +54,11 @@ block content
 
         
         li
-            a(href='/mockups/kitchen/') Kitchen
+            | Kitchen
 
             ul
                 li
-                    a(href='/mockups/kitchen/index.html') Main View
+                    | Main View
 
                     ul
                         li: a(href='/mockups/kitchen/index.html') Overview
