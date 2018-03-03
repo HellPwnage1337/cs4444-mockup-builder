@@ -1,4 +1,4 @@
-extends /templates/main
+extends /templates/restaurant
 
 block styles
     style.
@@ -8,6 +8,8 @@ block styles
 
 block content
     h1.border-bottom.pb-3.mb-4 Mock-Ups
+
+    h4 In-Store
 
     ul.list-unstyled
         
@@ -88,3 +90,8 @@ block content
 
                     ul
                         li: a(href='/mockups/manager/index.html') Overview
+    
+    h4 Take-Out
+
+    ul
+        li: a(href='/mockups/takeout/index.html') Home
