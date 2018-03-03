@@ -1,0 +1,30 @@
+extends /templates/table
+
+block content
+    h1 Confirm Order
+
+    .row
+        .col-9
+            table.table.table-sm
+                thead.thead-light
+                    tr
+                        th(scope='col') Item
+                        th(scope='col') Price
+                tbody
+                    tr
+                        td Sprite
+                        td 3.99
+                    tr
+                        td No appetizer
+                        td -
+                    tr
+                        td Hot Dog
+                        td 5.99
+                    tr
+                        td No dessert
+                        td -
+            
+            
+            button.btn.btn-danger Start Over
+            button.btn.btn-primary Order More
+            button.btn.btn-success Done
