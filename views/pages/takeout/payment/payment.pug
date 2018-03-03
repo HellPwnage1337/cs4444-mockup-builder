@@ -1,0 +1,41 @@
+extends /templates/takeout
+
+block styles
+    style.
+        #total, tr {
+            color: #000;
+        }
+
+block content
+    h1 Payment
+
+    table.table.table-striped.table-hover.table-sm
+        thead.thead-light
+            tr
+                th(scope='col') Item
+                th(scope='col') Price
+        
+        //- items
+        tbody
+            tr(data-price='3.99')
+                td Diet Coke
+                td 3.99
+            tr(data-price='5.99')
+                td Hot Dog
+                td 5.99
+            tr(data-price='3.99')
+                td Coke
+                td 3.99
+            tr(data-price='4.99')
+                td Fried Pickles
+                td 4.99
+            tr(data-price='5.99')
+                td Hamburger
+                td 5.99
+            tr.table-dark.bg-info#total
+                td Total
+                td 24.95
+    
+    button.btn.btn-success#btn-pay Pay
+
+    .my-5.py-3#spacer

@@ -1,0 +1,43 @@
+extends /templates/takeout
+
+block styles
+    style.
+        #tip-value {
+            max-width: 10rem;
+        }
+
+block content
+    h1 Payment
+
+    .row.mt-5
+        .col-12
+            table.table.table-sm
+                tbody
+                    tr
+                        td.text-left Food
+                        td.text-right 24.95
+                    tr
+                        td.text-left Tip
+                        td
+                            .input-group.justify-content-end
+                                input.form-control.text-right#tip-value(type='text' value='20')
+                                .input-group-append
+                                    .input-group-text
+                                        input(type='radio')
+                                        | &nbsp; $
+                                    .input-group-text
+                                        input(type='radio' checked='checked')
+                                        | &nbsp; %
+
+                    tr
+                        td.text-left Total
+                        td.text-right 29.94
+    
+    .row.mt-5
+        .col-6
+            button.btn.btn-primary#btn-cancel &lt; &nbsp; Cancel
+        .col-6
+            .d-flex.justify-content-end
+                button.btn.btn-success.ml-2#btn-cash Cash
+                button.btn.btn-info.ml-2#btn-card Card
+                
