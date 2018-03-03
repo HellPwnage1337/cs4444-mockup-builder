@@ -1,1 +1,60 @@
-//- TODO: PAYMENT SUCCESSFUL. PLAY GAME FOR CHANCE TO WIN FREE DESSERT?
+extends /templates/table
+
+block styles
+    style.
+        #tip-value {
+            max-width: 10rem;
+        }
+
+block scripts
+    script.
+        $(() => { $('#show-modal').click(); });
+
+block content
+    h1 Payment
+
+    .row.mt-5
+        .col-10
+            table.table.table-sm
+                tbody
+                    tr
+                        td.text-left Food
+                        td.text-right 24.95
+                    tr
+                        td.text-left Tip
+                        td
+                            .input-group.justify-content-end
+                                input.form-control.text-right#tip-value(type='text' value='20')
+                                .input-group-append
+                                    .input-group-text
+                                        input(type='radio')
+                                        | &nbsp; $
+                                    .input-group-text
+                                        input(type='radio' checked='checked')
+                                        | &nbsp; %
+
+                    tr
+                        td.text-left Total
+                        td.text-right 29.94
+    
+    .row.mt-5
+        .col-5
+            button.btn.btn-primary#btn-cancel &lt; &nbsp; Cancel
+        .col-5
+            .d-flex.justify-content-end
+                button.btn.btn-success.ml-2#btn-cash Cash
+                button.btn.btn-info.ml-2#btn-card Card
+    
+    .modal#card-modal(tabindex='-1')
+        .modal-dialog.modal-dialog-centered
+            .modal-content
+                .modal-header
+                    h5.modal-title Card Payment
+                .modal-body.text-center
+                    p Payment successful!
+                    p Would you like a chance for a free dessert?
+                .modal-footer
+                    button.btn.btn-primary#btn-no No thanks
+                    button.btn.btn-success#btn-yes Sure!
+    
+    button.invisible#show-modal(data-toggle='modal' data-target='#card-modal')
