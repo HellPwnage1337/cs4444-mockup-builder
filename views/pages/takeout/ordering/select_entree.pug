@@ -1,0 +1,50 @@
+extends /templates/table
+
+block styles
+    style.
+        #items div {
+            margin-top: 0.5rem;
+        }
+
+block content
+    .row
+        .col-9
+            h3.border-bottom.pb-3 Select Entree
+
+            .row#items
+                .col-4
+                    .card
+                        .card-body
+                            h5.card-title Hot Dog
+                .col-4
+                    .card
+                        .card-body
+                            h5.card-title Hamburger
+                .col-4
+                    .card
+                        .card-body
+                            h5.card-title Pizza
+                .col-4
+                    .card
+                        .card-body
+                            h5.card-title Salad
+                
+            .row
+                .col-2.mt-3.mr-3
+                    button.btn.btn-large.btn-primary None
+        
+        .col-3
+            h3.border-bottom.pb-3.mb-4 Order
+
+            .card.my-3
+                .card-body
+                    ul.list-unstyled
+                        li.text-truncate Diet Coke
+                        li.text-truncate Fried Pickles
+                        li.text-truncate Hamburger
+                        li.text-truncate No dessert
+            .card.my-3
+                .card-body
+                    ul.list-unstyled
+                        li.text-truncate Sprite
+                        li.text-truncate No appetizer
