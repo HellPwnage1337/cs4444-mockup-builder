@@ -4,6 +4,12 @@ html
         title #TODO Eats
         link(rel="shortcut icon", href="/mockups/static/favicon.ico")
 
+        //- responsiveness
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        
+
         //- styles
         link(href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm", crossorigin="anonymous")
         link(href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0-beta.3/lux/bootstrap.min.css", rel="stylesheet", integrity="sha384-XI0PIujkSZEzZ5m8WTEm+krRuIpfO+vHrEznaIrhTAkbrbIvfs11kzCqUarPR7yn", crossorigin="anonymous")
@@ -14,12 +20,14 @@ html
     body
         include /includes/navbar
         
-        block pre
+        .container-fluid
+            block pre
         
         .container
             block content
         
-        block post
+        .container-fluid
+            block post
         
         //- scripts
         //- (at the end of the document, to make it load faster in some browsers)
