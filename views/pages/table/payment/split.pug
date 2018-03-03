@@ -6,6 +6,12 @@ block styles
             color: #000;
         }
 
+block scripts
+    script.
+        $(() => {
+            $('#show-modal').click();
+        });
+
 block content
     h1 Payment
 
@@ -39,4 +45,49 @@ block content
     button.btn.btn-info#btn-split Split
     button.btn.btn-success#btn-pay Pay
 
+    .modal#split-payment-modal(tabindex='-1')
+        .modal-dialog.modal-dialog-centered
+            .modal-content
+                .modal-header
+                    h5.modal-title Split Payment
+                .modal-body
+                    table.table.table-sm
+                        thead.thead-light
+                            tr
+                                th(scope='col')
+                                th(scope='col') Item
+                                th(scope='col') Price
+                        
+                        //- items
+                        tbody
+                            tr(data-price='3.99')
+                                td: input(type='checkbox' checked='checked')
+                                td Diet Coke
+                                td 3.99
+                            tr(data-price='5.99')
+                                td: input(type='checkbox' checked='checked')
+                                td Hot Dog
+                                td 5.99
+                            tr(data-price='3.99')
+                                td: input(type='checkbox')
+                                td Coke
+                                td 3.99
+                            tr(data-price='4.99')
+                                td: input(type='checkbox' checked='checked')
+                                td Fried Pickles
+                                td 4.99
+                            tr(data-price='5.99')
+                                td: input(type='checkbox')
+                                td Hamburger
+                                td 5.99
+                            tr.table-dark.bg-info#total
+                                td
+                                td Total
+                                td 14.97
+                    .d-flex.justify-content-between.my-2
+                        button.btn.btn-danger#btn-cancel Cancel
+                        button.btn.btn-success#btn-next Next &gt;
+
     .my-5.py-3#spacer
+
+    button.invisible#show-modal(data-toggle='modal' data-target='#split-payment-modal')
